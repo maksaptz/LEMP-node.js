@@ -75,6 +75,8 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg```
 #### Добавим репозиторий в список доступтных репозиториев
 ```sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'```
+#### Обновим репозитории
+```apt update```
 #### Произведем установку PHP8.1
 ```apt install php8.1-fpm php8.1-mysql -y```
 #### Добавим службу в автозагрузку
