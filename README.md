@@ -27,7 +27,6 @@
 ```
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
-
 ```
 #### Добавим репозиторий Nginx в список доступтных репозиториев
 ```
