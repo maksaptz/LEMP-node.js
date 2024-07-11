@@ -59,7 +59,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```apt update```
 
 
-```apt upgrade```
+```apt upgrade -y```
 
 
 ```apt install mysql-client mysql-community-server mysql-server -y```
