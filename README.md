@@ -2,7 +2,7 @@
 sudo -i
 apt update
 apt upgrade -y
-apt install curl gnupg2 ca-certificates lsb-release debian-archive-keyring vim -y
+apt install apt-transport-https curl gnupg2 ca-certificates lsb-release debian-archive-keyring vim -y
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
@@ -23,5 +23,11 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
 apt update
 apt upgrade
 apt install mysql-client mysql-community-server mysql-server -y
-#apt install --reinstall mysql-common
-#apt install mysql-server -y
+mysql_secure_installation
+systemctl enable mysql@.service 
+
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+apt install php8.1-fpm php8.1-mysql -y
+
+groupadd node
