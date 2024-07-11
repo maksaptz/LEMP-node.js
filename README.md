@@ -2,8 +2,6 @@
 sudo -i
 apt update
 apt upgrade -y
-dpkg-reconfigure locales
-en_US.UTF-8.
 apt install curl gnupg2 ca-certificates lsb-release debian-archive-keyring vim -y
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
@@ -19,8 +17,9 @@ apt update
 apt install nginx=1.18.* -y
 apt-mark hold nginx=1.18.*
 
-wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
-dpkg -i mysql-apt-config_0.8.32-1_all.deb
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+dpkg -i mysql-apt-config_0.8.22-1_all.deb
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C 
 apt update
 apt upgrade
 apt install --reinstall mysql-common
