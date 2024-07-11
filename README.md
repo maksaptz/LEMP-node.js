@@ -31,7 +31,11 @@
 ```echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \ | sudo tee /etc/apt/preferences.d/99nginx```
 #### Снова обновим репозитории и установим требуемую версию Nginx
 ```apt update```
+
+
 ```apt install nginx=1.18.* -y```
+
+
 ```apt-mark hold nginx=1.18.*```
 
 
