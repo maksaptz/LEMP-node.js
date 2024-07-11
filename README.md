@@ -22,8 +22,8 @@
 ```apt upgrade -y```
 #### Установим пакеты необходимые для работы
 ```apt install apt-transport-https curl gnupg2 ca-certificates lsb-release debian-archive-keyring vim -y```
-#### Для установки Nginx версии 1.18 нам потребуется подключить NGINX Repository 
-#### Имортируем GPG ключ репозитория 
+### Nginx
+#### Имортируем GPG ключ Nginx репозитория 
 ```
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
