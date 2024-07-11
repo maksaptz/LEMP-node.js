@@ -56,7 +56,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```dpkg -i mysql-apt-config_0.8.22-1_all.deb```
 #### Т.к. при обновлении репозиториев возникала ошибка в связи с итсекшим ключом, добавим репозиторий в надежные источники
 ```apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C```
-#### Проведем установку Mysql 8.0
+#### Проведем установку Mysql
 ```apt update```
 
 
