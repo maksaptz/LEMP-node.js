@@ -87,17 +87,11 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```groupadd node```
 #### Создадим нового пользователя
 ```useradd node -s /bin/bash -g node -m -p qwerty1234```
-#### Подготовим папку для node
-```mkdir /usr/local/bin/node```
-#### Изменим владельца
-```chown node:node /usr/local/bin/node```
 #### Перейдем в пользователя node
 ```su node```
-#### Перейдем в папку для установки
-```cd /usr/local/bin/node```
 #### Скачаем и установим nvm
 ```curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash```
-#### Обновим среду окружения
+#### Обновим profile
 ```source ~/.profile```
 #### С помощью менеджера установим требуемые версии node.js
 ```nvm install 16```
