@@ -31,3 +31,14 @@ sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/
 apt install php8.1-fpm php8.1-mysql -y
 
 groupadd node
+useradd node -s /bin/bash -g node -m -p qwerty1234
+mkdir /usr/local/bin/node
+chown node:node /usr/local/bin/node
+su node
+cd /usr/local/bin/node
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+
+nvm install 16
+nvm install 20
+nvm use 20
