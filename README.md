@@ -57,8 +57,14 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C```
 #### Проведем установку Mysql 8.0
 ```apt update```
+
+
 ```apt upgrade```
+
+
 ```apt install mysql-client mysql-community-server mysql-server -y```
+
+
 #### Сконфигурируем первичные настройки безопасности
 ```mysql_secure_installation```
 #### Добавим службу в автозагрузку
