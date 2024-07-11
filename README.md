@@ -71,7 +71,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```systemctl enable mysql@.service```
 
 
-#### Скачаем GPG ключ для репозитория PHP 
+#### Скачаем GPG ключ для репозитория PHP (для доступа к ключу нужен VPN)
 ```wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg```
 #### Добавим репозиторий в список доступтных репозиториев
 ```sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'```
@@ -101,6 +101,8 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```source ~/.profile```
 #### С помощью менеджера установим требуемые версии node.js
 ```nvm install 16```
+
+
 ```nvm install 20```
 #### Зададим версию по умолчанию
 ```nvm use 20```
