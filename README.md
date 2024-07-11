@@ -19,6 +19,9 @@ apt update
 apt install nginx=1.18.* -y
 apt-mark hold nginx=1.18.*
 
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
-apt install ./mysql-apt-config_0.8.24-1_all.deb
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+dpkg -i mysql-apt-config_0.8.32-1_all.deb
 apt update
+apt upgrade
+apt install --reinstall mysql-common
+apt install mysql-server -y
