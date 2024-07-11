@@ -18,7 +18,7 @@
 ```sudo -i```
 #### Обновим репозитории
 ```apt update```
-#### Обновим ппакеты
+#### Обновим пакеты
 ```apt upgrade -y```
 #### Установим пакеты необходимые для работы
 ```apt install apt-transport-https curl gnupg2 ca-certificates lsb-release debian-archive-keyring vim -y```
