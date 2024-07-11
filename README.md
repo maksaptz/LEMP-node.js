@@ -22,5 +22,6 @@ dpkg -i mysql-apt-config_0.8.22-1_all.deb
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C 
 apt update
 apt upgrade
-apt install --reinstall mysql-common
-apt install mysql-server -y
+apt install mysql-client mysql-community-server mysql-server -y
+#apt install --reinstall mysql-common
+#apt install mysql-server -y
