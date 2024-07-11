@@ -27,6 +27,8 @@
 ```
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+
+### Nginx
 ```
 #### Добавим репозиторий Nginx в список доступтных репозиториев
 ```
@@ -49,6 +51,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```apt-mark hold nginx=1.18.*```
 
 
+### Mysql
 #### Загрузим deb пакет mysql
 ```wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb```
 #### Запустим пакет для конфигурации репозитория Mysql
@@ -71,6 +74,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```systemctl enable mysql@.service```
 
 
+### PHP
 #### Скачаем GPG ключ для репозитория PHP (для доступа к ключу нужен VPN)
 ```wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg```
 #### Добавим репозиторий в список доступтных репозиториев
@@ -83,6 +87,7 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```systemctl enable php8.1-fpm.service```
 
 
+### Node.js
 #### Добавим группу для пользователя node
 ```groupadd node```
 #### Создадим нового пользователя
