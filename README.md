@@ -105,6 +105,3 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 ```nvm install 20```
 #### Зададим версию по умолчанию
 ```nvm use 20```
-
-
-## На данном этапе сервер готов к разворачиванию требуемых проектов. 
